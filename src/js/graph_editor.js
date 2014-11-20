@@ -1,8 +1,4 @@
 
-var n = require('./src/node.js');
-console.log(n);
-
-exports.Canvas = require('./src/canvas.js');
-exports.Foo = require('./src/node.js');
-
-console.log(exports.Foo);
+module.exports.NodesContainer = require('./src/nodes_container.js');
+module.exports.Canvas = require('./src/canvas.js');
+module.exports.Node = require('./src/node.js');

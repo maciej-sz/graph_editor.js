@@ -1,6 +1,14 @@
-Node = function(){};
-Node.prototype.test = function(){
-    console.log('test3');
+var Uuid = require('uuid');
+
+function Node(type, uuid, options, data){
+    this._uuid = (uuid)? uuid : Uuid.v4();
+}
+
+/**
+ * @returns {String}
+ */
+Node.prototype.getUuid = function(){
+    return this._uuid;
 };
 
-exports = Node;
+module.exports = Node;
